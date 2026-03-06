@@ -148,8 +148,8 @@ LOGOUT_REDIRECT_URL = 'home'
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 465
-EMAIL_HOST_USER = 'anindakundu37@gmail.com'
-EMAIL_HOST_PASSWORD = 'mmub drsz jtkz phkj'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_SSL = True
 
 
