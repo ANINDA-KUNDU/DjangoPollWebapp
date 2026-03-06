@@ -1,0 +1,98 @@
+.egg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rice {
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 50%;
+    text-align: center;
+}
+.hilsa{
+    display: block;
+    font-weight: bold;
+    margin-left: 3%;
+    text-align: left;
+    margin-top: 5%;
+}
+.rohita {
+    width: 95%;
+    border: 1px solid black;
+    border-radius: 20px;
+    height: 40px;
+    padding-left: 15px;
+    background-color: whitesmoke;
+    font-size: 15px;
+}
+.lobeo {
+    width: 98%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 25px;
+    margin-top: 3%;
+    font-size: 17px;
+    background-color: white;
+}
+.lobeo:hover {
+    border: 2px solid black;
+    border-radius: 25px;
+    background-color: skyblue;
+    color: white;
+    font-weight: bold;
+    scroll-behavior: smooth;
+    transition: 0.25s ease;
+}
+.chicken {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 42px;
+    width: 98%;
+    border: 1px solid black;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+.chicken:hover {
+    background-color: #43af43;
+}
+.icon {
+    height: 100%;
+    width: 5%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.lentils {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
+.chicken:hover .lentils {
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+.chicken:hover .icon {
+    margin-right: 3%;
+    scroll-behavior: smooth;
+    transition: 0.25s ease;
+}
+@media (max-width: 768px) {
+    .rice {
+        width: 100%;
+        border: none;
+    }
+    .lobeo {
+        width: 95%;
+        margin-top: 3%;
+    }
+    .icon {
+        height: 100%;
+        width: 10%;
+        border-radius: 50%;
+    }
+}

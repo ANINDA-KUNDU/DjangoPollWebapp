@@ -1,0 +1,18 @@
+{%  extends 'core/base.html' %}
+{%  load static  %}
+{%  block title  %}Result Page{% endblock  %}
+{%  block content %}
+
+<h1>Result page</h1>
+
+
+<div class = "floor">
+    <div class = "roof">
+        <h1>{{ question.question_text }}</h1>
+        {% for choice in question.choice_set.all  %}
+            <p>{{ choice.choice_text }} -- {{ choice.votes }}Vote {{ choice.votes | pluralize  }}</p>
+        {% endfor  %}
+    </div>
+</div>
+
+{%  endblock  %}

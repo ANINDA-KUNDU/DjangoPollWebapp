@@ -1,0 +1,38 @@
+{%  extends 'core/base.html' %}
+{%  load static %}
+{%  block title %}Detail Poll Page{%  endblock %}
+{%  block content %}
+
+<h1>Poll Detail Page</h1>
+
+
+<div class = "horse">
+    {% if user_already_voted %}
+        <p><strong>You have already voted on this poll.</strong></p>
+        <a href="{% url 'result' question.id %}" class = "elephant">View Results</a>
+    {% else %}
+        <form method = "POST" action = "{%  url 'vote' question.id %}" class = "cow">
+            {% csrf_token  %}
+            <fieldset>
+                <legend><h1>{{ question.question_text }}</h1></legend>
+
+                {% if error_message  %}
+                    <p><strong>{{ error_message }}</strong></p>
+                {%  endif %}
+
+                {%  for choice in question.choice_set.all  %}
+                    <div>
+                        <input type = "radio" name = "choice" id = "choice{{ forloop.counter }}" value = "{{ choice.id  }}">
+                        <label for = "choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
+                    </div>
+                {%  endfor %}
+            </fieldset>
+            <button type = "submit" value = "Vote" class = "dog">Vote</button>
+        </form>
+    {% endif %}
+</div>
+
+
+
+
+{% endblock  %}

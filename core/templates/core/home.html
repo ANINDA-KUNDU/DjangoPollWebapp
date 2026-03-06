@@ -1,0 +1,28 @@
+{%  extends 'core/base.html' %}
+{%  load static %}
+{%  block title %}Home Page{%  endblock %}
+{%  block content %}
+
+<h1>Home page</h1>
+
+{% if user.is_authenticated  %}
+    <p class = "picture">Welcome, {{user.username}}</p>
+{% else  %}
+    <p>You are not logged in.</p>
+{% endif  %}
+
+<div class = "butter">
+    {%  for question in latest_question_list  %}
+        <a href = "{% url 'detail' question.id  %}" class = "cream">{{ question.question_text }}</a>
+        <div>
+            {% for choice in question.choice_set.all  %}
+                <p class = "ice_cream">{{ choice.choice_text }} --- {{choice.votes}} votes </p>
+                <p class = "hot_cream">{{choice.get_percentage_vote}}%</p>
+            {% endfor  %}
+        </div>
+        <br>
+    {%  endfor %}
+</div>
+
+
+{%  endblock  %}

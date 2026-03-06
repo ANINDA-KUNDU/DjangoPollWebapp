@@ -1,0 +1,62 @@
+.horse {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+}
+.cow {
+    width: 60%;
+}
+.dog {
+    width: 30%;
+    height: 40px;
+    float: right;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: white;
+    font-size: 15px;
+    margin: 2%;
+}
+.dog:hover {
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: #98f798;
+    color: white;
+    font-weight: bold;
+    scroll-behavior: smooth;
+    transition: 0.25s ease;
+}
+.elephant {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    margin-left: 3%;
+}
+.elephant:hover {
+    text-decoration: underline;
+    color: green;
+    font-weight: bold;
+    border: 3px solid  green;
+    border-radius: 20px;
+    background-color: #a1f7a1;
+    padding: 1% 2%;
+    scroll-behavior: smooth;
+    transition: 0.20s ease;
+}
+@media ( max-width: 768px ){
+    .horse {
+        height: 70vh;
+    }
+    .cow {
+        width: 100%;
+        margin: 3%;
+    }
+    .dog {
+        background-color: #98f798;
+    }
+    .elephant {
+        color: green;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,38 @@
+{%  extends 'core/base.html' %}
+{%  load static %}
+{%  block title  %}Login Page{% endblock   %}
+{%  block content %}
+
+
+{%  if message %}
+    {%  for message in messages %}
+        {%  if message.tags == 'error' %}
+            <p>{{message}}</p>
+        {% else  %}
+            <p>{{message}}</p>
+        {%  endif %}
+    {%  endfor %}
+{%  endif %}
+
+<div class = "garden">
+    <form method = "POST" class = "rose">
+        {% csrf_token  %}
+        <h1>Login Page</h1>
+        <div>
+            <label class = "sunflower">Username</label>
+            <input type = "text" name = "username" placeholder = "Username" class = "chinarose">
+        </div>
+        <div>
+            <label class = "sunflower">Password</label>
+            <input type = "password" name = "password" placeholder = "Password" class = "chinarose">
+        </div>
+        <button type = "submit" class = "marygold">Login</button>
+        <div>
+            <p>Forget your password?<a href = "{% url 'forget_password'  %}">Forget Password</a></p>
+        </div>
+    </form>
+</div>
+
+
+
+{%  endblock  %}

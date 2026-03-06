@@ -1,0 +1,148 @@
+header {
+    position: relative;
+    z-index: 1000;
+}
+nav {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+.logo{
+    text-decoration: none;
+    color: black;
+    font-size: 35px;
+}
+.burger {
+    display: none;
+}
+.fish{
+    margin-left: auto;
+    display: flex;
+    gap: 30px;
+}
+.curry {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    float: right; 
+    scroll-behavior: smooth;
+    transition: 0.25s ease;
+}
+.curry:hover{
+    font-weight: bold;
+    text-decoration: underline;
+    transition: 0.25s ease;
+    scroll-behavior: smooth;
+}
+body .menu-open {
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        font-size: 25px;
+    }
+    .burger {
+        display: block;
+        font-size: 0;
+        margin-left: auto;
+
+        position: relative;
+        z-index: 1001;
+        cursor: pointer;
+
+        
+    }
+    .burger::before {
+        content: "\2630";
+        font-size: 26px;
+    }
+    .burger.active::before {
+        content: "X";
+        font-size: 26px;
+        color: white;
+    }
+    .fish {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+
+        background: #343131;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 25px;
+
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+
+        z-index: 1000;
+    }
+    .fish.show{
+        transform: translateY(0);
+    }
+    .curry {
+        display: block;
+        color: white;
+        font-size: 20px;
+    }
+    .body-menu {
+        overflow: hidden;
+    }
+}
+
+.cream {
+    text-decoration: none;
+    color: black;
+    font-size: 40px;
+}
+.cream:hover {
+    color: green;
+    text-decoration: underline;
+}
+.butter {
+    margin-right: 20%;
+    margin-left: 20%;
+}
+.ice_cream {
+    font-size: 17px;
+    padding: 0px;
+    margin: 1%;
+}
+.hot_cream {
+    font-size: 17px;
+    padding: 0px;
+    margin: 1%;
+    color: blue;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+@media ( max-width: 768px ) {
+    .hot_cream {
+        margin-bottom: 5%;
+    }
+    .butter {
+        margin-right: 2%;
+        margin-left: 2%;
+    }
+}
+.picture {
+    font-size: 30px;
+    margin: 0px;
+}
+
+footer > p {
+    text-align: center;
+}
+@media ( max-width: 768px ) {
+    .picture {
+        font-size: 20px;
+        margin-bottom: 7%;
+        margin-top: 5%;
+    }
+}

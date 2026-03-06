@@ -1,0 +1,26 @@
+.floor {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 70vh;
+}
+.roof {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 2%;
+}
+@media ( max-width: 768px ) {
+    .roof {
+        width: 100%;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 5%;
+        border: none;
+    }
+    .floor {
+        height: 70vh;
+    }
+}

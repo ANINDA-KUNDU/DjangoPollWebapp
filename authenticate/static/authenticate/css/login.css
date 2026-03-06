@@ -1,0 +1,57 @@
+.garden {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 65vh;
+    margin: 5%;
+}
+.rose {
+    width: 60%;
+    border: 1px solid black;
+    border-radius: 20px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+.sunflower {
+    display: block;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 15px;
+    margin-top: 3%;
+}
+.chinarose {
+    width: 93%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    padding-left: 15px;
+    font-size: 17px;
+}
+.marygold {
+    width: 95%;
+    height: 45px;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 17px;
+    background-color: white;
+    margin-top: 3%;
+}
+.marygold:hover {
+    background-color: skyblue;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+}
+@media ( max-width: 768px ) {
+    .rose {
+        width: 100%;
+        border: none;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+   .marygold {
+        margin-top: 5%;
+   }
+}
